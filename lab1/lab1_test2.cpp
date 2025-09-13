@@ -5,9 +5,10 @@
 #include <omp.h>
 using namespace std;
 
-int main() {
+int main(int argc, char* argv[]) {
+	setlocale(LC_ALL, ".ACP");
 	// Определяем точность таймера OpenMP
-	cout << "Timer precision: " << omp_get_wtick() * 1e9 << " ns" << endl;
+	cout << "Точность вычисления: " << omp_get_wtick() * 1e9 << " ns" << endl;
 
 	// Замер начального времени выполнения
 	double start = omp_get_wtime();
@@ -23,7 +24,7 @@ int main() {
 	double end = omp_get_wtime();
 
 	// Вывод результатов измерений
-	cout << "Start time: " << start << " s" << endl;
-	cout << "End time: " << end << " s" << endl;
-	cout << "Elapsed time: " << (end - start) * 1000 << " ms" << endl;
+	cout << "Начальное время: " << start << " s" << endl;
+	cout << "Конечное время: " << end << " s" << endl;
+	cout << "Затраченное время: " << (end - start) * 1000 << " ms" << endl;
 }
