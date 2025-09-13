@@ -11,7 +11,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-    setlocale(LC_ALL, ".ACP"); // Установка локали для корректного отображения кириллицы
+    setlocale(LC_ALL, ".ACP");
     
     cout << "Последовательная область 1" << endl;
     cout << "Количество потоков OMP = ";
@@ -48,3 +48,4 @@ int main(int argc, char* argv[])
     
     cout << "Последовательная область 3" << endl;
 }
+
